@@ -2,9 +2,9 @@
   "name": "luhanka-countdown",
   "version": "0.0.0",
   "description": "luhanka countdown!",
-  "main": "index.js",
   "scripts": {
-    "dev": "rm -rf .cache && parcel \"src/*.html\""
+    "dev": "rm -rf .cache && parcel \"src/*.html\"",
+    "build": "parcel build \"src/*.html\""
   },
   "author": "Joonas Varis",
   "license": "ISC",
