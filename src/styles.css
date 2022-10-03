@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(#00ffff, #9600ff);
+    margin: 0;
+}
+
+#wrap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Gemunu Libre', sans-serif;    
+}
+
+#timer {
+    font-size: 4rem;
+}

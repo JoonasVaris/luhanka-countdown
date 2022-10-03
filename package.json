@@ -1,0 +1,14 @@
+{
+  "name": "luhanka-countdown",
+  "version": "0.0.0",
+  "description": "luhanka countdown!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf .cache && parcel \"src/*.html\""
+  },
+  "author": "Joonas Varis",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.7.0"
+  }
+}
