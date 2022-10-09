@@ -12,6 +12,25 @@ body {
     font-family: 'Gemunu Libre', sans-serif;    
 }
 
+#ohjelma p {
+    border-left: 3px solid hotpink;    
+    padding-left: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+a:visited {
+    text-decoration: none;
+    color: purple;
+}
+
 #timer {
     font-size: 4rem;
+}
+
+#nav {
+    padding-top: 2rem;
 }
