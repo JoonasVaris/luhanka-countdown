@@ -1,5 +1,5 @@
 window.onload = () => {
-    const luhankaTime = Date.parse("2022-11-04T19:00:00+03:00")
+    const luhankaTime = Date.parse("2022-11-04T19:00:00+02:00")
     const display = document.getElementById("timer");
     
     const msInMinute = 60 * 1000;
