@@ -86,7 +86,7 @@ window.onload = () => {
             
             setInterval(() => {
                 canvasContext.drawImage(images[getRandom(8)], 0, 0, this.width, this.height, getRandom(cw-116), getRandom(ch-155), this.width, this.height);
-            },1500)
+            },1000)
         }
         
         function getRandom(ceiling){
