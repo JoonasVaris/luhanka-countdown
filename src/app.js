@@ -1,25 +1,26 @@
 window.onload = () => {
     // const luhankaTime = Date.parse("2022-11-04T19:00:00+02:00")
-    const luhankaEnded = Date.parse("2022-11-06T15:00:00+02:00");
+    // const luhankaEnded = Date.parse("2022-11-06T15:00:00+02:00");
+    const nextLuhanka = Date.parse("2023-03-10T19:00:00+02:00");
     const display = document.getElementById("timer");
     
     const msInMinute = 60 * 1000;
     const msInHour = 60 * msInMinute;
     const msInDay = 24 * msInHour;
-    let luhangastaAikaa = Date.now() - luhankaEnded;
+    let timeToLuhanka = nextLuhanka - Date.now();
 
     function setTimer(){
-        const days = Math.floor(luhangastaAikaa / msInDay);
-        const hours = Math.floor((luhangastaAikaa - days * msInDay) / msInHour)
-        const minutes = Math.floor((luhangastaAikaa - days * msInDay - hours * msInHour) / msInMinute);
-        const seconds = Math.floor((luhangastaAikaa - days * msInDay - hours * msInHour - minutes * msInMinute) / 1000);
+        const days = Math.floor(timeToLuhanka / msInDay);
+        const hours = Math.floor((timeToLuhanka - days * msInDay) / msInHour)
+        const minutes = Math.floor((timeToLuhanka - days * msInDay - hours * msInHour) / msInMinute);
+        const seconds = Math.floor((timeToLuhanka - days * msInDay - hours * msInHour - minutes * msInMinute) / 1000);
         display.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`
     }
 
     setTimer();
     
     setInterval(function () {
-        luhangastaAikaa += 1000; // tick 1 second down, setInterval takes the delay to trigger
+        timeToLuhanka -= 1000; // tick 1 second down, setInterval takes the delay to trigger
         setTimer();
         // if(luhangastaAikaa < 1000){
         //     clearInterval(id);
