@@ -34,3 +34,19 @@ a:visited {
 #nav {
     padding-top: 2rem;
 }
+
+#versus-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #454545;
+}
+
+.slot {
+    display: flex;
+    background-color: hotpink;
+    width: 260px;
+    height: 500px;
+    margin: 20px;
+}
