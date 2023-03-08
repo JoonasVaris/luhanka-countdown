@@ -19,14 +19,14 @@ window.onload = () => {
 
     setTimer();
     
-    setInterval(function () {
+    const id = setInterval(function () {
         timeToLuhanka -= 1000; // tick 1 second down, setInterval takes the delay to trigger
         setTimer();
-        // if(luhangastaAikaa < 1000){
-        //     clearInterval(id);
-        //     // switchToOrbs();
-        //     return;
-        // }
+        if(timeToLuhanka < 1000 && timeToLuhanka > -5000){
+            clearInterval(id);
+            window.location.replace("/versus.html");
+            return;
+        }
     }, 1000);
 
     // function switchToOrbs(){

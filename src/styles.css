@@ -40,13 +40,45 @@ a:visited {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #454545;
+    background: #000;
 }
 
 .slot {
     display: flex;
-    background-color: hotpink;
-    width: 260px;
-    height: 500px;
+    background-color: gainsboro;
+    width: 400px;
+    height: 600px;
     margin: 20px;
+    opacity: 100%;
+}
+
+.slot-child {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out 0s;
+    transform: translateY(-100vh);
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    
+}
+
+.tribe {
+    height:fit-content;
+    margin-top: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right:auto;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.slot-child__visible {
+    transform: translateY(0%);
+}
+
+#versus-h1 {
+    font-size: 4rem;
 }
