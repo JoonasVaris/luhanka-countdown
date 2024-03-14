@@ -1,3 +1,10 @@
+let shouldPlay = false;
+
+const evenAudio = new Audio(
+  new URL("../assets/clock-even.mp3", import.meta.url)
+);
+const oddAudio = new Audio(new URL("../assets/clock-odd.mp3", import.meta.url));
+
 window.onload = () => {
   // const luhankaTime = Date.parse("2022-11-04T19:00:00+02:00")
   // const luhankaEnded = Date.parse("2022-11-06T15:00:00+02:00");
@@ -27,9 +34,23 @@ window.onload = () => {
 
   setTimer();
 
+  let counter = 0;
+  audioStuff();
+
   const id = setInterval(function () {
     timeToLuhanka -= 1000; // tick 1 second down, setInterval takes the delay to trigger
     setTimer();
+
+    if (shouldPlay) {
+      if (counter % 2 === 0) {
+        evenAudio.play();
+      } else {
+        oddAudio.play();
+      }
+    }
+
+    counter++;
+
     if (timeToLuhanka < 1000 && timeToLuhanka > -5000) {
       clearInterval(id);
       window.location.replace("/versus.html");
@@ -117,3 +138,23 @@ window.onload = () => {
   //     img8.src = new URL('../assets/winterorb8.jpeg', import.meta.url);
   // }
 };
+
+function audioStuff() {
+  const playButton = document.querySelector("#audio");
+  const pauseButton = document.querySelector("#disable-audio");
+
+  playButton.addEventListener("click", toggle);
+  pauseButton.addEventListener("click", toggle);
+
+  function toggle() {
+    if (playButton.classList.contains("hide")) {
+      playButton.classList.remove("hide");
+      pauseButton.classList.add("hide");
+      shouldPlay = false;
+    } else {
+      pauseButton.classList.remove("hide");
+      playButton.classList.add("hide");
+      shouldPlay = true;
+    }
+  }
+}

@@ -1,84 +1,93 @@
 body {
-    background: linear-gradient(#00ffff, #9600ff);
-    margin: 0;
+  background: linear-gradient(#00ffff, #9600ff);
+  margin: 0;
 }
 
 #wrap {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: 'Gemunu Libre', sans-serif;    
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Gemunu Libre", sans-serif;
 }
 
 #ohjelma p {
-    border-left: 3px solid hotpink;    
-    padding-left: 3px;
+  border-left: 3px solid hotpink;
+  padding-left: 3px;
 }
 
 a {
-    text-decoration: none;
-    color: purple;
+  text-decoration: none;
+  color: purple;
 }
 
 a:visited {
-    text-decoration: none;
-    color: purple;
+  text-decoration: none;
+  color: purple;
 }
 
 #timer {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 #nav {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
-#versus-wrap{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background: #000;
+#versus-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #000;
 }
 
 .slot {
-    display: flex;
-    background-color: gainsboro;
-    width: 400px;
-    height: 600px;
-    margin: 20px;
-    opacity: 100%;
+  display: flex;
+  background-color: gainsboro;
+  width: 400px;
+  height: 600px;
+  margin: 20px;
+  opacity: 100%;
 }
 
 .slot-child {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in-out 0s;
-    transform: translateY(-100vh);
-    background-color: black;
-    display: flex;
-    justify-content: end;
-    
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out 0s;
+  transform: translateY(-100vh);
+  background-color: black;
+  display: flex;
+  justify-content: end;
 }
 
 .tribe {
-    height:fit-content;
-    margin-top: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right:auto;
-    color: #fff;
-    font-weight: 700;
-    font-size: 3rem;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .slot-child__visible {
-    transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 #versus-h1 {
-    font-size: 4rem;
+  font-size: 4rem;
+}
+
+.hide {
+  display: none;
+}
+
+.audio-button {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 8px;
 }
