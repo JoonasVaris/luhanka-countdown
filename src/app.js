@@ -14,7 +14,7 @@ window.onload = () => {
   const msInMinute = 60 * 1000;
   const msInHour = 60 * msInMinute;
   const msInDay = 24 * msInHour;
-  let timeToLuhanka = Date.now() - nextLuhanka;
+  let timeToLuhanka = nextLuhanka - Date.now();
 
   function setTimer() {
     const days = Math.floor(timeToLuhanka / msInDay);
