@@ -38,7 +38,7 @@ window.onload = () => {
   audioStuff();
 
   const id = setInterval(function () {
-    timeToLuhanka += 1000; // tick 1 second down, setInterval takes the delay to trigger
+    timeToLuhanka -= 1000; // tick 1 second down, setInterval takes the delay to trigger
     setTimer();
 
     if (shouldPlay) {
