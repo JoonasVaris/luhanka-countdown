@@ -38,7 +38,12 @@ window.onload = () => {
   audioStuff();
 
   const id = setInterval(function () {
-    timeToLuhanka -= 1000; // tick 1 second down, setInterval takes the delay to trigger
+    if (timeToLuhanka > 0) {
+      timeToLuhanka -= 1000; // tick 1 second down, setInterval takes the delay to trigger
+    } else {
+      timeToLuhanka += 1000; // anno luhanka
+    }
+
     setTimer();
 
     if (shouldPlay) {
@@ -50,12 +55,6 @@ window.onload = () => {
     }
 
     counter++;
-
-    if (timeToLuhanka < 1000 && timeToLuhanka > -5000) {
-      clearInterval(id);
-      window.location.replace("/versus.html");
-      return;
-    }
   }, 1000);
 
   // function switchToOrbs(){
