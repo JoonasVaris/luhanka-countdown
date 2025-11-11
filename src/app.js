@@ -8,7 +8,7 @@ const oddAudio = new Audio(new URL("../assets/clock-odd.mp3", import.meta.url));
 window.onload = () => {
   // const luhankaTime = Date.parse("2022-11-04T19:00:00+02:00")
   // const luhankaEnded = Date.parse("2022-11-06T15:00:00+02:00");
-  const nextLuhanka = Date.parse("2025-21-11T18:00:00+03:00");
+  const nextLuhanka = Date.parse("2025-11-21T18:00:00+02:00");
   const display = document.getElementById("timer");
 
   const msInMinute = 60 * 1000;
