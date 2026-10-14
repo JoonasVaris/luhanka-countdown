@@ -5,6 +5,8 @@ body {
 
 #wrap {
   height: 100vh;
+  /* Visible viewport on mobile, without the area under the browser bars */
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +15,7 @@ body {
 }
 
 #timer {
-  font-size: 4rem;
+  font-size: clamp(2rem, 10vw, 4rem);
   font-variant-numeric: tabular-nums;
 }
 
